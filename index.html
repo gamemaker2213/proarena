@@ -1,0 +1,112 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ProArena | Gaming Hub</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#090d18;color:white;font-family:Arial,sans-serif}
+header{padding:22px 8%;background:#111a2b;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap}
+.logo{font-size:27px;font-weight:bold;color:#00e5a0}
+nav a{color:white;text-decoration:none;margin:8px}
+.hero{text-align:center;padding:85px 15px;background:linear-gradient(135deg,#101c35,#123b42)}
+.hero h1{font-size:42px;margin:10px}
+.hero span{color:#00e5a0}
+.hero p{color:#c4d2df}
+.btn{display:inline-block;background:#00e5a0;color:#07120f;padding:13px 24px;border-radius:7px;text-decoration:none;font-weight:bold;margin-top:15px}
+section{padding:45px 8%}
+h2{color:#00e5a0}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+.card{background:#151f32;padding:22px;border-radius:12px;border:1px solid #263650}
+.card h3{color:#00e5a0}
+li{margin:12px 0;color:#d3dce8}
+table{width:100%;border-collapse:collapse;background:#151f32}
+td,th{padding:13px;text-align:left;border-bottom:1px solid #34435a}
+th{color:#00e5a0}
+input,textarea{width:100%;padding:13px;margin:8px 0;background:#151f32;color:white;border:1px solid #34435a;border-radius:6px}
+button{background:#00e5a0;border:0;padding:13px 22px;border-radius:6px;font-weight:bold}
+footer{text-align:center;background:#111a2b;padding:25px;color:#aab8c8}
+</style>
+</head>
+<body>
+
+<header>
+<div class="logo">PROARENA 🎮</div>
+<nav>
+<a href="#home">Home</a>
+<a href="#games">Games</a>
+<a href="#tips">Tips</a>
+<a href="#leaderboard">Leaderboard</a>
+<a href="#contact">Contact</a>
+</nav>
+</header>
+
+<div class="hero" id="home">
+<h1>WELCOME TO <span>PROARENA</span></h1>
+<p>Your ultimate destination for PUBG Mobile and Free Fire gaming.</p>
+<p>Learn strategies. Improve your skills. Play smarter.</p>
+<a href="#games" class="btn">EXPLORE GAMES</a>
+</div>
+
+<section id="games">
+<h2>POPULAR GAMES</h2>
+<div class="cards">
+<div class="card">
+<h3> PUBG Mobile</h3>
+<p>Explore survival strategies, maps, weapons and competitive gameplay tips.</p>
+</div>
+<div class="card">
+<h3>🔥 Free Fire</h3>
+<p>Discover character abilities, game modes and smart battle strategies.</p>
+</div>
+</div>
+</section>
+
+<section id="tips">
+<h2>PRO GAMING TIPS</h2>
+<div class="cards">
+<div class="card"><h3>🎯 Improve Aim</h3><p>Practice regularly in training mode and learn to control your aim.</p></div>
+<div class="card"><h3>🧠 Smart Strategy</h3><p>Use cover, communicate with teammates and plan your moves.</p></div>
+<div class="card"><h3>🎧 Teamwork</h3><p>Stay connected with your squad and share useful information.</p></div>
+</div>
+</section>
+
+<section id="leaderboard">
+<h2>TOP PLAYERS</h2>
+<table>
+<tr><th>Rank</th><th>Player</th><th>Points</th></tr>
+<tr><td>#1</td><td>ProKing</td><td>9500</td></tr>
+<tr><td>#2</td><td>Shadow</td><td>8700</td></tr>
+<tr><td>#3</td><td>Legend</td><td>7900</td></tr>
+</table>
+<p style="color:#aab8c8">Demo leaderboard — sample player data.</p>
+</section>
+
+<section id="contact">
+<h2>CONTACT US</h2>
+<p>Have a question or suggestion? Send us a message.</p>
+<form id="contactForm">
+<input type="text" placeholder="Your Name" required>
+<input type="email" placeholder="Your Email" required>
+<textarea placeholder="Your Message" rows="5" required></textarea>
+<button type="submit">Send Message</button>
+</form>
+<p id="status"></p>
+</section>
+
+<footer>
+<p>© 2026 ProArena Gaming Hub. All rights reserved.</p>
+<p>Made for gaming lovers 🎮</p>
+</footer>
+
+<script>
+document.getElementById("contactForm").addEventListener("submit",function(e){
+e.preventDefault();
+document.getElementById("status").textContent="Thanks! Contact form demo submitted.";
+this.reset();
+});
+</script>
+</body>
+</html>
