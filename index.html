@@ -2,138 +2,571 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta property="og:title" content="ProArena - Ultimate Gaming Hub">
-
-<meta property="og:description" content="Explore PUBG Mobile and Free Fire guides, tips and gaming updates on ProArena.">
-
-<meta property="og:type" content="website">
-
-<meta property="og:url" content="https://gamemaker2213.github.io/proarena/">
-  <title>ProArena - PUBG & Free Fire Gaming</title>
-
-<meta name="description" content="ProArena is your ultimate gaming hub for PUBG Mobile and Free Fire guides, tips, tournaments and gaming updates.">
-
-<meta name="keywords" content="ProArena, PUBG Mobile, Free Fire, Gaming, Esports">
-  <meta name="google-site-verification" content="VvxOt4boMkphyqh_scAadlvsQQmvaG41wmHSpBat0rU" />
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ProArena | Gaming Hub</title>
+
+<title>ProArena - Ultimate PUBG & Free Fire Gaming Hub</title>
+
+<meta name="description" content="Welcome to ProArena, your ultimate gaming hub for PUBG Mobile and Free Fire guides, tips and gaming updates.">
+
+<meta name="keywords" content="ProArena, PUBG Mobile, Free Fire, Gaming, Esports, Gaming Guides">
+
+<meta name="google-site-verification" content="VvxOt4boMkphyqh_scAadlvsQQmvaG41wmHSpBat0rU">
+
+<meta property="og:title" content="ProArena - Ultimate Gaming Hub">
+<meta property="og:description" content="Explore PUBG Mobile and Free Fire guides, tips and gaming updates on ProArena.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://gamemaker2213.github.io/proarena/">
+
+<meta name="theme-color" content="#090414">
+
 <style>
-*{box-sizing:border-box}
-body{margin:0;background:#090d18;color:white;font-family:Arial,sans-serif}
-header{padding:22px 8%;background:#111a2b;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap}
-.logo{font-size:27px;font-weight:bold;color:#00e5a0}
-nav a{color:white;text-decoration:none;margin:8px}
-.hero{text-align:center;padding:85px 15px;background:linear-gradient(135deg,#101c35,#123b42)}
-.hero h1{font-size:42px;margin:10px}
-.hero span{color:#00e5a0}
-.hero p{color:#c4d2df}
-.btn{display:inline-block;background:#00e5a0;color:#07120f;padding:13px 24px;border-radius:7px;text-decoration:none;font-weight:bold;margin-top:15px}
-section{padding:45px 8%}
-h2{color:#00e5a0}
-.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
-.card{background:#151f32;padding:22px;border-radius:12px;border:1px solid #263650}
-.card h3{color:#00e5a0}
-li{margin:12px 0;color:#d3dce8}
-table{width:100%;border-collapse:collapse;background:#151f32}
-td,th{padding:13px;text-align:left;border-bottom:1px solid #34435a}
-th{color:#00e5a0}
-input,textarea{width:100%;padding:13px;margin:8px 0;background:#151f32;color:white;border:1px solid #34435a;border-radius:6px}
-button{background:#00e5a0;border:0;padding:13px 22px;border-radius:6px;font-weight:bold}
-footer{text-align:center;background:#111a2b;padding:25px;color:#aab8c8}
+
+/* ===== GLOBAL ===== */
+
+:root {
+  --bg: #090414;
+  --bg2: #100820;
+  --card: #1a1030;
+  --purple: #9333ea;
+  --neon: #c084fc;
+  --pink: #e879f9;
+  --white: #ffffff;
+  --muted: #c4b5d8;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--white);
+  font-family: Arial, sans-serif;
+  line-height: 1.7;
+}
+
+/* ===== NAVBAR ===== */
+
+header {
+  background: rgba(19, 9, 34, 0.97);
+  padding: 18px 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #542080;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 27px;
+  font-weight: 900;
+  color: var(--neon);
+  letter-spacing: 2px;
+  text-shadow: 0 0 15px #a855f7;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: var(--pink);
+}
+
+/* ===== HERO ===== */
+
+.hero {
+  min-height: 480px;
+  padding: 100px 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background:
+    radial-gradient(ellipse at top, #512080 0%, transparent 60%),
+    linear-gradient(135deg, #100820, #200b38, #090414);
+}
+
+.hero h1 {
+  font-size: clamp(35px, 6vw, 65px);
+  font-weight: 900;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.hero span {
+  color: var(--neon);
+  text-shadow: 0 0 25px #a855f7;
+}
+
+.hero p {
+  color: var(--muted);
+  font-size: 17px;
+  margin: 5px;
+}
+
+.btn {
+  display: inline-block;
+  background: linear-gradient(135deg, #9333ea, #c026d3);
+  color: white;
+  padding: 14px 30px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 25px;
+  box-shadow: 0 0 20px #9333ea55;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0 30px #c084fc;
+}
+
+/* ===== SECTIONS ===== */
+
+section {
+  padding: 65px 8%;
+  scroll-margin-top: 80px;
+}
+
+.section-title {
+  text-align: center;
+  color: var(--neon);
+  font-size: 32px;
+  margin-bottom: 35px;
+}
+
+.section-subtitle {
+  text-align: center;
+  color: var(--muted);
+  margin: -20px 0 35px;
+}
+
+/* ===== CARDS ===== */
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 22px;
+}
+
+.card {
+  background: linear-gradient(145deg, #211336, #140b24);
+  padding: 27px;
+  border-radius: 15px;
+  border: 1px solid #542080;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-7px);
+  border-color: var(--neon);
+  box-shadow: 0 0 25px #9333ea44;
+}
+
+.card h3 {
+  color: var(--neon);
+  margin-bottom: 12px;
+  font-size: 21px;
+}
+
+.card p {
+  color: var(--muted);
+  font-size: 15px;
+}
+
+/* ===== TIPS ===== */
+
+#tips {
+  background: #100820;
+}
+
+/* ===== GUIDES ===== */
+
+#guides {
+  background: linear-gradient(180deg, #100820, #090414);
+}
+
+.guide-card {
+  background: #1a1030;
+  padding: 25px;
+  border-radius: 12px;
+  border-left: 4px solid var(--purple);
+  border-top: 1px solid #542080;
+  border-right: 1px solid #542080;
+  border-bottom: 1px solid #542080;
+}
+
+.guide-card h3 {
+  color: var(--pink);
+  margin-bottom: 10px;
+}
+
+/* ===== LEADERBOARD ===== */
+
+.table-wrapper {
+  overflow-x: auto;
+  border-radius: 12px;
+  border: 1px solid #542080;
+}
+
+table {
+  width: 100%;
+  min-width: 350px;
+  border-collapse: collapse;
+  background: #1a1030;
+}
+
+th, td {
+  padding: 16px;
+  text-align: left;
+  border-bottom: 1px solid #3b2457;
+}
+
+th {
+  color: var(--neon);
+  background: #281440;
+}
+
+td {
+  color: var(--muted);
+}
+
+tr:hover td {
+  background: #281440;
+}
+
+/* ===== CONTACT ===== */
+
+#contact {
+  background: #100820;
+}
+
+.contact-box {
+  max-width: 650px;
+  margin: auto;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 15px;
+  margin: 9px 0;
+  background: #1a1030;
+  border: 1px solid #542080;
+  border-radius: 8px;
+  color: white;
+  font-size: 15px;
+  font-family: Arial, sans-serif;
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  border-color: var(--neon);
+  box-shadow: 0 0 12px #9333ea55;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #a78bbd;
+}
+
+button {
+  width: 100%;
+  padding: 15px;
+  background: linear-gradient(135deg, #9333ea, #c026d3);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+button:hover {
+  box-shadow: 0 0 20px #a855f7;
+}
+
+/* ===== FOOTER ===== */
+
+footer {
+  text-align: center;
+  background: #07020f;
+  padding: 30px 15px;
+  border-top: 1px solid #542080;
+}
+
+footer p {
+  color: #a78bbd;
+  margin: 5px;
+}
+
+/* ===== MOBILE ===== */
+
+@media (max-width: 650px) {
+
+  header {
+    flex-direction: column;
+    gap: 15px;
+    padding: 18px 12px;
+  }
+
+  nav {
+    justify-content: center;
+    gap: 13px;
+  }
+
+  nav a {
+    font-size: 13px;
+  }
+
+  .hero {
+    min-height: 400px;
+    padding: 65px 15px;
+  }
+
+  .hero h1 {
+    font-size: 36px;
+  }
+
+  section {
+    padding: 45px 18px;
+  }
+
+  .section-title {
+    font-size: 26px;
+  }
+
+  .card {
+    padding: 22px;
+  }
+}
+
 </style>
 </head>
+
 <body>
 
+<!-- NAVBAR -->
+
 <header>
-<div class="logo">PROARENA 🎮</div>
-<nav>
-<a href="#home">Home</a>
-<a href="#games">Games</a>
-<a href="#tips">Tips</a>
-<a href="#leaderboard">Leaderboard</a>
-<a href="#contact">Contact</a>
-</nav>
+  <div class="logo">PROARENA 🎮</div>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#games">Games</a>
+    <a href="#tips">Tips</a>
+    <a href="#guides">Guides</a>
+    <a href="#leaderboard">Leaderboard</a>
+    <a href="#contact">Contact</a>
+  </nav>
 </header>
 
+<!-- HERO -->
+
 <div class="hero" id="home">
-<h1>WELCOME TO <span>PROARENA</span></h1>
-<p>Your ultimate destination for PUBG Mobile and Free Fire gaming.</p>
-<p>Learn strategies. Improve your skills. Play smarter.</p>
-<a href="#games" class="btn">EXPLORE GAMES</a>
+
+  <h1>WELCOME TO <span>PROARENA</span></h1>
+
+  <p>Your Ultimate Destination for PUBG Mobile and Free Fire Gaming.</p>
+
+  <p>Learn Strategies. Improve Your Skills. Play Smarter.</p>
+
+  <a href="#games" class="btn">EXPLORE GAMES →</a>
+
 </div>
+
+<!-- GAMES -->
 
 <section id="games">
-<h2>POPULAR GAMES</h2>
-<div class="cards">
-<div class="card">
-<h3> PUBG Mobile</h3>
-<p>Explore survival strategies, maps, weapons and competitive gameplay tips.</p>
-</div>
-<div class="card">
-<h3>🔥 Free Fire</h3>
-<p>Discover character abilities, game modes and smart battle strategies.</p>
-</div>
-</div>
+
+  <h2 class="section-title">POPULAR GAMES</h2>
+
+  <p class="section-subtitle">Explore your favourite battle royale games.</p>
+
+  <div class="cards">
+
+    <div class="card">
+      <h3>🎯 PUBG Mobile</h3>
+      <p>Explore survival strategies, maps, weapons and competitive gameplay tips.</p>
+    </div>
+
+    <div class="card">
+      <h3>🔥 Free Fire</h3>
+      <p>Discover character abilities, game modes and smart battle strategies.</p>
+    </div>
+
+  </div>
+
 </section>
+
+<!-- TIPS -->
 
 <section id="tips">
-<h2>PRO GAMING TIPS</h2>
-<div class="cards">
-<div class="card"><h3>🎯 Improve Aim</h3><p>Practice regularly in training mode and learn to control your aim.</p></div>
-<div class="card"><h3>🧠 Smart Strategy</h3><p>Use cover, communicate with teammates and plan your moves.</p></div>
-<div class="card"><h3>🎧 Teamwork</h3><p>Stay connected with your squad and share useful information.</p></div>
-</div>
+
+  <h2 class="section-title">PRO GAMING TIPS</h2>
+
+  <div class="cards">
+
+    <div class="card">
+      <h3>🎯 Improve Aim</h3>
+      <p>Practice regularly in training mode and learn to control your aim.</p>
+    </div>
+
+    <div class="card">
+      <h3>🧠 Smart Strategy</h3>
+      <p>Use cover, communicate with teammates and plan your moves.</p>
+    </div>
+
+    <div class="card">
+      <h3>🎧 Teamwork</h3>
+      <p>Stay connected with your squad and share useful information.</p>
+    </div>
+
+  </div>
+
 </section>
+
+<!-- GUIDES -->
+
+<section id="guides">
+
+  <h2 class="section-title">GAMING GUIDES</h2>
+
+  <p class="section-subtitle">Learn something new and improve your gameplay.</p>
+
+  <div class="cards">
+
+    <div class="guide-card">
+      <h3>PUBG Mobile Guides</h3>
+      <p>Learn beginner tips, map knowledge, weapon information and gameplay strategies.</p>
+    </div>
+
+    <div class="guide-card">
+      <h3>Free Fire Guides</h3>
+      <p>Explore character guides, beginner tips, game modes and gameplay strategies.</p>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- LEADERBOARD -->
 
 <section id="leaderboard">
-<h2>TOP PLAYERS</h2>
-<table>
-<tr><th>Rank</th><th>Player</th><th>Points</th></tr>
-<tr><td>#1</td><td>ProKing</td><td>9500</td></tr>
-<tr><td>#2</td><td>Shadow</td><td>8700</td></tr>
-<tr><td>#3</td><td>Legend</td><td>7900</td></tr>
-</table>
-<p style="color:#aab8c8">Demo leaderboard — sample player data.</p>
+
+  <h2 class="section-title">TOP PLAYERS</h2>
+
+  <div class="table-wrapper">
+
+    <table>
+      <tr>
+        <th>Rank</th>
+        <th>Player</th>
+        <th>Points</th>
+      </tr>
+
+      <tr>
+        <td>#1</td>
+        <td>ProKing</td>
+        <td>9500</td>
+      </tr>
+
+      <tr>
+        <td>#2</td>
+        <td>Shadow</td>
+        <td>8700</td>
+      </tr>
+
+      <tr>
+        <td>#3</td>
+        <td>Legend</td>
+        <td>7900</td>
+      </tr>
+    </table>
+
+  </div>
+
+  <p style="color:#a78bbd;margin-top:15px;">
+    Demo leaderboard — sample player data.
+  </p>
+
 </section>
+
+<!-- CONTACT -->
 
 <section id="contact">
-<h2>CONTACT US</h2>
-<p>Have a question or suggestion? Send us a message.</p>
-<form id="contactForm">
-<input type="text" placeholder="Your Name" required>
-<input type="email" placeholder="Your Email" required>
-<textarea placeholder="Your Message" rows="5" required></textarea>
-<button type="submit">Send Message</button>
-</form>
-<p id="status"></p>
+
+  <h2 class="section-title">CONTACT US</h2>
+
+  <p class="section-subtitle">Have a question or suggestion? Send us a message.</p>
+
+  <div class="contact-box">
+
+    <form id="contactForm">
+
+      <input type="text" placeholder="Your Name" required>
+
+      <input type="email" placeholder="Your Email" required>
+
+      <textarea placeholder="Your Message" rows="5" required></textarea>
+
+      <button type="submit">SEND MESSAGE →</button>
+
+    </form>
+
+    <p id="status" style="margin-top:15px;text-align:center;"></p>
+
+  </div>
+
 </section>
 
+<!-- FOOTER -->
+
 <footer>
-<p>© 2026 ProArena Gaming Hub. All rights reserved.</p>
-<p>Made for gaming lovers 🎮</p>
+
+  <p>© 2026 ProArena Gaming Hub. All rights reserved.</p>
+
+  <p>Made for Gaming Lovers 🎮</p>
+
 </footer>
 
 <script>
-document.getElementById("contactForm").addEventListener("submit",function(e){
-e.preventDefault();
-document.getElementById("status").textContent="Thanks! Contact form demo submitted.";
-this.reset();
+
+document.getElementById("contactForm").addEventListener("submit", function(e) {
+
+  e.preventDefault();
+
+  document.getElementById("status").textContent =
+  "Thanks! Contact form demo submitted.";
+
+  this.reset();
+
 });
+
 </script>
-  <section style="padding:40px 20px; text-align:center; background:#111827; color:white;">
-  <h2>🎮 Gaming Guides</h2>
-  <p>Improve your gaming skills with ProArena!</p>
 
-  <div style="margin:25px auto; padding:20px; background:#1f2937; border-radius:12px; max-width:600px;">
-    <h3>PUBG Mobile Guides</h3>
-    <p>Learn beginner tips, map knowledge and gameplay strategies.</p>
-  </div>
-
-  <div style="margin:25px auto; padding:20px; background:#1f2937; border-radius:12px; max-width:600px;">
-    <h3>Free Fire Guides</h3>
-    <p>Explore character guides, beginner tips and gameplay strategies.</p>
-  </div>
-  </section>
 </body>
 </html>
