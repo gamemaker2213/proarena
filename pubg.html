@@ -1,0 +1,553 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Explore PUBG Mobile guides, maps, weapons, gameplay tips and gaming knowledge on ProArena.">
+<meta name="theme-color" content="#0b0615">
+
+<title>PUBG Mobile | ProArena</title>
+
+<style>
+:root {
+  --bg: #0b0615;
+  --panel: #191027;
+  --panel2: #211437;
+  --accent: #b58cff;
+  --text: #ffffff;
+  --muted: #bdb3ca;
+  --border: #38264e;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 85px;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* HEADER */
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(18, 10, 31, 0.96);
+  border-bottom: 1px solid var(--border);
+  padding: 17px 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.logo {
+  color: var(--accent);
+  font-size: 24px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+nav a {
+  color: #ddd4e9;
+  font-size: 14px;
+  transition: 0.2s;
+}
+
+nav a:hover {
+  color: var(--accent);
+}
+
+/* HERO */
+
+.hero {
+  min-height: 390px;
+  padding: 80px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background:
+    radial-gradient(ellipse at top, #48256b, transparent 65%),
+    linear-gradient(135deg, #211033, #0b0615);
+}
+
+.hero .tag {
+  color: var(--accent);
+  font-size: 13px;
+  letter-spacing: 3px;
+  margin-bottom: 15px;
+}
+
+.hero h1 {
+  font-size: clamp(38px, 8vw, 65px);
+  margin-bottom: 12px;
+  line-height: 1.1;
+}
+
+.hero p {
+  max-width: 620px;
+  color: var(--muted);
+  margin-bottom: 27px;
+}
+
+.btn {
+  display: inline-block;
+  background: var(--accent);
+  color: #160b25;
+  padding: 12px 24px;
+  border-radius: 7px;
+  font-weight: bold;
+  transition: 0.2s;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  background: #c8aaff;
+}
+
+/* GENERAL SECTIONS */
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 65px 20px;
+}
+
+.section-heading {
+  margin-bottom: 27px;
+}
+
+.section-heading h2 {
+  font-size: 29px;
+  color: var(--accent);
+  margin-bottom: 7px;
+}
+
+.section-heading p {
+  color: var(--muted);
+}
+
+/* CARDS */
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(225px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 25px;
+  transition: 0.25s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  border-color: var(--accent);
+}
+
+.card .number {
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.card h3 {
+  margin: 12px 0;
+  font-size: 19px;
+}
+
+.card p {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+/* FEATURE SECTION */
+
+.feature {
+  background: #130b20;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.feature-content {
+  max-width: 1100px;
+  margin: auto;
+  padding: 60px 20px;
+}
+
+.feature-box {
+  background: var(--panel2);
+  padding: 30px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+}
+
+.feature-box h2 {
+  color: var(--accent);
+  margin-bottom: 12px;
+}
+
+.feature-box p {
+  color: var(--muted);
+}
+
+/* FAQ */
+
+.faq-item {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  padding: 20px;
+  border-radius: 9px;
+  margin-bottom: 12px;
+}
+
+.faq-item h3 {
+  font-size: 16px;
+  margin-bottom: 7px;
+}
+
+.faq-item p {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+/* LINKS */
+
+.page-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.page-links a {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  padding: 12px 17px;
+  border-radius: 8px;
+  transition: 0.2s;
+}
+
+.page-links a:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+/* FOOTER */
+
+footer {
+  background: #120a1d;
+  border-top: 1px solid var(--border);
+  text-align: center;
+  padding: 28px 15px;
+}
+
+footer p {
+  color: var(--muted);
+  font-size: 13px;
+  margin: 5px;
+}
+
+footer a {
+  color: var(--accent);
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+  header {
+    justify-content: center;
+    text-align: center;
+  }
+
+  nav {
+    justify-content: center;
+    gap: 13px;
+  }
+
+  .hero {
+    min-height: 340px;
+    padding: 60px 18px;
+  }
+
+  .container {
+    padding: 45px 17px;
+  }
+
+  .section-heading h2 {
+    font-size: 25px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+  <a href="index.html" class="logo">PROARENA</a>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="#guides">Guides</a>
+    <a href="#tips">Tips</a>
+    <a href="#weapons">Weapons</a>
+    <a href="#faq">FAQ</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+
+<section class="hero">
+  <div class="tag">PROARENA GAMING HUB</div>
+
+  <h1>PUBG MOBILE</h1>
+
+  <p>
+    Explore PUBG Mobile guides, gameplay knowledge,
+    maps, weapons and useful tips — all in one place.
+  </p>
+
+  <a href="#guides" class="btn">Explore PUBG Guides</a>
+</section>
+
+<!-- GUIDES -->
+
+<main>
+
+<section class="container" id="guides">
+
+  <div class="section-heading">
+    <h2>PUBG Mobile Guides</h2>
+    <p>Learn the game with simple and useful guides.</p>
+  </div>
+
+  <div class="cards">
+
+    <article class="card">
+      <div class="number">GUIDE 01</div>
+      <h3>Getting Started</h3>
+      <p>
+        Understand the basics of PUBG Mobile,
+        match objectives, controls and survival.
+      </p>
+    </article>
+
+    <article class="card">
+      <div class="number">GUIDE 02</div>
+      <h3>Game Modes</h3>
+      <p>
+        Explore different gameplay modes
+        and understand how each mode works.
+      </p>
+    </article>
+
+    <article class="card">
+      <div class="number">GUIDE 03</div>
+      <h3>Team Strategy</h3>
+      <p>
+        Learn about teamwork, communication
+        and supporting your squad.
+      </p>
+    </article>
+
+  </div>
+</section>
+
+<!-- TIPS -->
+
+<section class="feature" id="tips">
+
+  <div class="feature-content">
+
+    <div class="section-heading">
+      <h2>Gameplay Tips</h2>
+      <p>Improve your game knowledge with these basic tips.</p>
+    </div>
+
+    <div class="cards">
+
+      <article class="card">
+        <h3>01. Learn the Map</h3>
+        <p>
+          Understand map locations and
+          check the safe zone regularly.
+        </p>
+      </article>
+
+      <article class="card">
+        <h3>02. Practice Controls</h3>
+        <p>
+          Use the training area to become
+          familiar with the game controls.
+        </p>
+      </article>
+
+      <article class="card">
+        <h3>03. Work as a Team</h3>
+        <p>
+          Communicate with teammates and
+          share useful supplies.
+        </p>
+      </article>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- WEAPONS -->
+
+<section class="container" id="weapons">
+
+  <div class="section-heading">
+    <h2>Weapons & Equipment</h2>
+    <p>Explore the main equipment categories in PUBG Mobile.</p>
+  </div>
+
+  <div class="cards">
+
+    <article class="card">
+      <h3>Assault Rifles</h3>
+      <p>
+        Learn about assault rifle features
+        and their role in different situations.
+      </p>
+    </article>
+
+    <article class="card">
+      <h3>Sniper Rifles</h3>
+      <p>
+        Understand long-range weapon
+        categories and their characteristics.
+      </p>
+    </article>
+
+    <article class="card">
+      <h3>Equipment</h3>
+      <p>
+        Learn about helmets, armor,
+        backpacks and useful supplies.
+      </p>
+    </article>
+
+  </div>
+</section>
+
+<!-- MAP KNOWLEDGE -->
+
+<section class="feature" id="maps">
+
+  <div class="feature-content">
+
+    <div class="feature-box">
+      <h2>Explore PUBG Maps</h2>
+
+      <p>
+        PUBG Mobile features different maps,
+        each with its own locations, terrain
+        and gameplay experience. Learn the
+        layout of each map to understand
+        the game better.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- FAQ -->
+
+<section class="container" id="faq">
+
+  <div class="section-heading">
+    <h2>Frequently Asked Questions</h2>
+    <p>Quick answers to common PUBG Mobile questions.</p>
+  </div>
+
+  <div class="faq-item">
+    <h3>What is PUBG Mobile?</h3>
+    <p>
+      PUBG Mobile is a multiplayer battle royale
+      game where players compete to be the last
+      player or team remaining.
+    </p>
+  </div>
+
+  <div class="faq-item">
+    <h3>Can beginners play PUBG Mobile?</h3>
+    <p>
+      Yes. Beginners can learn the controls,
+      maps and gameplay through practice.
+    </p>
+  </div>
+
+  <div class="faq-item">
+    <h3>What is the safe zone?</h3>
+    <p>
+      The safe zone is the playable area
+      that becomes smaller during a match.
+    </p>
+  </div>
+
+</section>
+
+<!-- OTHER PAGES -->
+
+<section class="container">
+
+  <div class="section-heading">
+    <h2>Explore ProArena</h2>
+    <p>Discover more gaming content.</p>
+  </div>
+
+  <div class="page-links">
+    <a href="index.html">← Home Page</a>
+    <a href="freefire.html">Free Fire →</a>
+    <a href="index.html#updates">Gaming Updates</a>
+  </div>
+
+</section>
+
+</main>
+
+<!-- FOOTER -->
+
+<footer>
+  <p>© 2026 ProArena Gaming Hub. All rights reserved.</p>
+  <p>Made for Gaming Lovers 🎮</p>
+  <p><a href="index.html">Back to ProArena Home</a></p>
+</footer>
+
+</body>
+  </html>
+  
