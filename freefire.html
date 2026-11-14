@@ -1,0 +1,680 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Free Fire | ProArena</title>
+<meta name="description" content="Explore Free Fire characters, weapons, maps, game modes, guides and gameplay tips on ProArena.">
+<meta name="keywords" content="Free Fire, Free Fire Guides, Characters, Weapons, Maps, ProArena">
+<meta name="theme-color" content="#100d0a">
+
+<meta property="og:title" content="Free Fire | ProArena">
+<meta property="og:description" content="Discover Free Fire guides, characters and gameplay tips on ProArena.">
+<meta property="og:type" content="website">
+
+<style>
+:root {
+  --bg: #100d0a;
+  --panel: #1d1711;
+  --panel2: #261c13;
+  --accent: #ff9b35;
+  --text: #ffffff;
+  --muted: #c5b9ad;
+  --border: #493321;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 85px;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: Arial, sans-serif;
+  line-height: 1.7;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* HEADER */
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(20, 15, 10, .97);
+  border-bottom: 1px solid var(--border);
+  padding: 17px 7%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.logo {
+  color: var(--accent);
+  font-size: 25px;
+  font-weight: 900;
+  letter-spacing: 1.5px;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 19px;
+}
+
+nav a {
+  color: #eee;
+  font-size: 14px;
+  transition: .2s;
+}
+
+nav a:hover {
+  color: var(--accent);
+}
+
+/* HERO */
+
+.hero {
+  min-height: 390px;
+  padding: 80px 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background:
+    linear-gradient(rgba(12,9,6,.78), rgba(12,9,6,.88)),
+    url("https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=1600&q=85")
+    center/cover no-repeat;
+  border-bottom: 1px solid var(--border);
+}
+
+.hero-tag {
+  color: var(--accent);
+  font-size: 13px;
+  letter-spacing: 3px;
+  margin-bottom: 15px;
+}
+
+.hero h1 {
+  font-size: clamp(40px, 8vw, 65px);
+  line-height: 1.15;
+  margin-bottom: 15px;
+}
+
+.hero h1 span {
+  color: var(--accent);
+}
+
+.hero p {
+  max-width: 600px;
+  color: #d2c7bd;
+  margin-bottom: 25px;
+}
+
+.btn {
+  display: inline-block;
+  background: var(--accent);
+  color: #1a1008;
+  padding: 12px 23px;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: .2s;
+}
+
+.btn:hover {
+  background: #ffb96e;
+  transform: translateY(-2px);
+}
+
+/* SECTIONS */
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 65px 20px;
+}
+
+.section-heading {
+  margin-bottom: 28px;
+}
+
+.section-heading h2 {
+  color: var(--accent);
+  font-size: 29px;
+  margin-bottom: 6px;
+}
+
+.section-heading p {
+  color: var(--muted);
+}
+
+/* CARDS */
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 24px;
+  transition: .25s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  border-color: var(--accent);
+  background: var(--panel2);
+}
+
+.card-icon {
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.card h3 {
+  color: var(--accent);
+  margin-bottom: 10px;
+  font-size: 19px;
+}
+
+.card p {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+/* HIGHLIGHT */
+
+.highlight {
+  background: #19120c;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.highlight-content {
+  max-width: 1100px;
+  margin: auto;
+  padding: 40px 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 20px;
+  text-align: center;
+}
+
+.highlight-item h3 {
+  color: var(--accent);
+  font-size: 20px;
+}
+
+.highlight-item p {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+/* FEATURE */
+
+.feature-box {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 30px;
+}
+
+.feature-box h2 {
+  color: var(--accent);
+  margin-bottom: 12px;
+}
+
+.feature-box p {
+  color: var(--muted);
+}
+
+/* FAQ */
+
+.faq-item {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 9px;
+  padding: 19px;
+  margin-bottom: 12px;
+}
+
+.faq-item h3 {
+  font-size: 16px;
+  margin-bottom: 7px;
+}
+
+.faq-item p {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+/* PAGE LINKS */
+
+.page-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.page-links a {
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 7px;
+  padding: 12px 17px;
+  transition: .2s;
+}
+
+.page-links a:hover {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+/* FOOTER */
+
+footer {
+  background: #0a0806;
+  border-top: 1px solid var(--border);
+  text-align: center;
+  padding: 27px 15px;
+}
+
+footer p {
+  color: var(--muted);
+  font-size: 13px;
+  margin: 5px;
+}
+
+footer a {
+  color: var(--accent);
+}
+
+/* MOBILE */
+
+@media (max-width: 600px) {
+  header {
+    justify-content: center;
+    text-align: center;
+  }
+
+  nav {
+    justify-content: center;
+    gap: 13px;
+  }
+
+  .hero {
+    min-height: 340px;
+    padding: 55px 18px;
+  }
+
+  .container {
+    padding: 45px 17px;
+  }
+
+  .section-heading h2 {
+    font-size: 25px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+
+<header>
+  <a href="index.html" class="logo">PROARENA</a>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="#guides">Guides</a>
+    <a href="#characters">Characters</a>
+    <a href="#weapons">Weapons</a>
+    <a href="#faq">FAQ</a>
+  </nav>
+</header>
+
+<!-- HERO -->
+
+<section class="hero">
+  <div class="hero-tag">PROARENA GAMING HUB</div>
+
+  <h1>FREE <span>FIRE</span></h1>
+
+  <p>
+    Discover Free Fire characters, weapons, maps,
+    game modes and useful gameplay knowledge.
+    Everything you need to explore in one place.
+  </p>
+
+  <a href="#guides" class="btn">Explore Free Fire</a>
+</section>
+
+<!-- HIGHLIGHTS -->
+
+<section class="highlight">
+  <div class="highlight-content">
+
+    <div class="highlight-item">
+      <h3>Characters</h3>
+      <p>Explore character abilities</p>
+    </div>
+
+    <div class="highlight-item">
+      <h3>Weapons</h3>
+      <p>Discover weapon categories</p>
+    </div>
+
+    <div class="highlight-item">
+      <h3>Maps</h3>
+      <p>Learn about game locations</p>
+    </div>
+
+    <div class="highlight-item">
+      <h3>Strategies</h3>
+      <p>Improve game knowledge</p>
+    </div>
+
+  </div>
+</section>
+
+<main>
+
+<!-- GUIDES -->
+
+<section class="container" id="guides">
+
+  <div class="section-heading">
+    <h2>Free Fire Guides</h2>
+    <p>Useful information for beginners and experienced players.</p>
+  </div>
+
+  <div class="cards">
+
+    <article class="card">
+      <div class="card-icon">🎮</div>
+      <h3>Getting Started</h3>
+      <p>
+        Understand the basics of Free Fire,
+        controls, objectives and gameplay.
+      </p>
+    </article>
+
+    <article class="card">
+      <div class="card-icon">🧠</div>
+      <h3>Gameplay Strategy</h3>
+      <p>
+        Learn about positioning, teamwork
+        and smart decision-making.
+      </p>
+    </article>
+
+    <article class="card">
+      <div class="card-icon">🏆</div>
+      <h3>Ranked Matches</h3>
+      <p>
+        Understand ranked gameplay,
+        match objectives and progression.
+      </p>
+    </article>
+
+  </div>
+</section>
+
+<!-- CHARACTERS -->
+
+<section class="container" id="characters">
+
+  <div class="section-heading">
+    <h2>Character Knowledge</h2>
+    <p>Learn about character abilities and their gameplay roles.</p>
+  </div>
+
+  <div class="cards">
+
+    <article class="card">
+      <div class="card-icon">⚡</div>
+      <h3>Active Abilities</h3>
+      <p>
+        Explore characters with abilities
+        that players can activate during matches.
+      </p>
+    </article>
+
+    <article class="card">
+      <div class="card-icon">🛡️</div>
+      <h3>Passive Abilities</h3>
+      <p>
+        Understand abilities that provide
+        different gameplay advantages.
+      </p>
+    </article>
+
+    <article class="card">
+      <div class="card-icon">🎯</div>
+      <h3>Character Combinations</h3>
+      <p>
+        Learn how different abilities
+        can work together.
+      </p>
+    </article>
+
+  </div>
+</section>
+
+<!-- WEAPONS -->
+
+<section class="container" id="weapons">
+
+  <div class="section-heading">
+    <h2>Weapons & Equipment</h2>
+    <p>Explore the main weapon categories in Free Fire.</p>
+  </div>
+
+  <div class="cards">
+
+    <article class="card">
+      <h3>Assault Rifles</h3>
+      <p>
+        Learn about assault rifles
+        and their general gameplay role.
+      </p>
+    </article>
+
+    <article class="card">
+      <h3>Sniper Rifles</h3>
+      <p>
+        Explore long-range weapon
+        categories and their features.
+      </p>
+    </article>
+
+    <article class="card">
+      <h3>Shotguns</h3>
+      <p>
+        Understand close-range weapon
+        categories and their characteristics.
+      </p>
+    </article>
+
+    <article class="card">
+      <h3>Equipment</h3>
+      <p>
+        Discover useful equipment,
+        protection and supplies.
+      </p>
+    </article>
+
+  </div>
+</section>
+
+<!-- GAME MODES -->
+
+<section class="container">
+
+  <div class="section-heading">
+    <h2>Game Modes</h2>
+    <p>Explore different ways to experience Free Fire.</p>
+  </div>
+
+  <div class="cards">
+
+    <article class="card">
+      <div class="card-icon">🌍</div>
+      <h3>Battle Royale</h3>
+      <p>
+        Explore survival-based gameplay
+        across different maps.
+      </p>
+    </article>
+
+    <article class="card">
+      <div class="card-icon">⚔️</div>
+      <h3>Clash Squad</h3>
+      <p>
+        Learn about team-based rounds
+        and competitive gameplay.
+      </p>
+    </article>
+
+  </div>
+</section>
+
+<!-- MAP INFORMATION -->
+
+<section class="container">
+
+  <div class="feature-box">
+    <h2>Explore Free Fire Maps</h2>
+
+    <p>
+      Free Fire offers different maps with unique
+      locations, environments and layouts.
+      Learning the map can help players understand
+      movement, positioning and match strategy.
+    </p>
+  </div>
+
+</section>
+
+<!-- TIPS -->
+
+<section class="container">
+
+  <div class="section-heading">
+    <h2>Pro Gaming Tips</h2>
+    <p>Simple tips to improve your gameplay knowledge.</p>
+  </div>
+
+  <div class="cards">
+
+    <article class="card">
+      <h3>01. Practice Controls</h3>
+      <p>
+        Become familiar with the controls
+        and adjust your settings comfortably.
+      </p>
+    </article>
+
+    <article class="card">
+      <h3>02. Understand Abilities</h3>
+      <p>
+        Learn what each character ability
+        does before choosing a character.
+      </p>
+    </article>
+
+    <article class="card">
+      <h3>03. Play as a Team</h3>
+      <p>
+        Communicate with teammates
+        and support each other.
+      </p>
+    </article>
+
+  </div>
+</section>
+
+<!-- FAQ -->
+
+<section class="container" id="faq">
+
+  <div class="section-heading">
+    <h2>Frequently Asked Questions</h2>
+    <p>Quick answers about Free Fire.</p>
+  </div>
+
+  <div class="faq-item">
+    <h3>What is Free Fire?</h3>
+    <p>
+      Free Fire is a multiplayer battle royale
+      game developed by Garena.
+    </p>
+  </div>
+
+  <div class="faq-item">
+    <h3>Can beginners play Free Fire?</h3>
+    <p>
+      Yes. Beginners can learn the game
+      through practice and tutorials.
+    </p>
+  </div>
+
+  <div class="faq-item">
+    <h3>What are character abilities?</h3>
+    <p>
+      Character abilities are special features
+      that provide different gameplay effects.
+    </p>
+  </div>
+
+</section>
+
+<!-- OTHER PAGES -->
+
+<section class="container">
+
+  <div class="section-heading">
+    <h2>Explore ProArena</h2>
+    <p>Discover more gaming content.</p>
+  </div>
+
+  <div class="page-links">
+    <a href="index.html">← Home Page</a>
+    <a href="pubg.html">PUBG Mobile →</a>
+    <a href="index.html#updates">Gaming Updates</a>
+  </div>
+
+</section>
+
+</main>
+
+<!-- FOOTER -->
+
+<footer>
+  <p>© 2026 ProArena Gaming Hub. All rights reserved.</p>
+  <p>Independent gaming information website.</p>
+  <p><a href="index.html">Back to ProArena Home</a></p>
+</footer>
+
+</body>
+</html>
