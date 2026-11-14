@@ -96,59 +96,26 @@ nav a:hover {
 /* ===== HERO ===== */
 
 .hero {
-  min-height: 480px;
-  padding: 100px 20px;
+  min-height: 250px;
+  padding: 0;
   text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   background:
-    linear-gradient(rgba(9,4,20,0.55), rgba(9,4,20,0.75)),
+    linear-gradient(rgba(9,4,20,0.15), rgba(9,4,20,0.25)),
     url("proarena-banner.png") center/cover no-repeat;
 }
 
-.hero h1 {
-  font-size: clamp(35px, 6vw, 65px);
-  font-weight: 900;
-  line-height: 1.2;
-  margin-bottom: 20px;
+.hero h1,
+.hero p,
+.hero .btn {
+  display: none;
 }
 
 .hero span {
   color: var(--neon);
-  text-shadow: 0 0 25px #a855f7;
-}
-
-.hero p {
-  color: var(--muted);
-  font-size: 17px;
-  margin: 5px;
-}
-
-.btn {
-  display: inline-block;
-  background: linear-gradient(135deg, #9333ea, #c026d3);
-  color: white;
-  padding: 14px 30px;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: bold;
-  margin-top: 25px;
-  box-shadow: 0 0 20px #9333ea55;
-  transition: 0.3s;
-}
-
-.btn:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 0 30px #c084fc;
-}
-
-/* ===== SECTIONS ===== */
-
-section {
-  padding: 65px 8%;
-  scroll-margin-top: 80px;
 }
 
 .section-title {
